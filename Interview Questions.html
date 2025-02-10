@@ -1,0 +1,87 @@
+Q1.Difference between “ == “ and “ === “ operators.
+
+Ans:- "==" (Equality Operator): This operator checks for equality of values but performs type coercion if the types are different.
+       For example, 5 == '5' will return true because the string '5' is coerced to a number.
+
+      "===" (Strict Equality Operator): This operator checks for both value and type equality without performing type coercion.
+       For example, 5 === '5' will return false because the types (number and string) are different.
+
+Q2. What are the differences between var, let and const?
+
+Ans:- var:
+        Function-scoped or globally scoped.
+        Can be re-declared and updated.
+        Hoisted to the top of its scope, but initialized with undefined.
+
+        let:
+        Block-scoped (limited to the block in which it is defined).
+        Can be updated but not re-declared in the same scope.
+        Also hoisted, but not initialized.
+
+        const:
+        Block-scoped.
+        Cannot be updated or re-declared.
+        Must be initialized at the time of declaration.
+        The reference is constant, but if it points to an object or array, the contents can still be modified.
+
+Q3.What is execution context
+
+Ans:-Execution context is an abstract concept that holds information about the environment within which the current code is being executed. It includes:
+
+    The value of this.
+    The variable environment (scope).
+    The lexical environment (the scope chain).
+
+Q4.What is creation phase and execution phase.
+
+Ans:- "Creation Phase": This is the first phase of the execution context where:
+        Memory is allocated for variables and functions.
+        Variables are hoisted (declared but not initialized).
+        The scope chain is established.
+
+      "Execution Phase": This is the second phase where:
+        The code is executed line by line.
+        Variables are assigned their values.
+        Functions are invoked.
+
+Q5.What is hoisting?
+
+Ans:- Hoisting is a JavaScript mechanism where variables and function declarations 
+      are moved to the top of their containing scope during the creation phase. 
+      This means you can use variables and functions before they are declared in the 
+      code. However, only the declarations are hoisted, not the initializations.
+
+Q6.Difference between undefined vs not defined vs NaN
+
+Ans :-"undefined": A variable that has been declared but not assigned a value is undefined. It is a type itself.
+
+       "not defined": This error occurs when you try to access a variable that has not been declared at all in the 
+        current scope. For example, console.log(x) where x has never been declared will throw a ReferenceError.
+
+        "NaN (Not-a-Number)": This is a special value that represents a computational error when a value is not a valid number. 
+        For example, parseInt("abc") will return NaN.
+
+Q7.How many operators do we have in JS ? 
+
+Ans :-JavaScript has several types of operators, including:
+        Arithmetic Operators
+        Assignment Operators
+        Comparison Operators
+        Logical Operators
+        Bitwise Operators
+        Unary Operators
+        Ternary Operator
+        Type Operators
+
+Q8.Explain Local Scope, Block Scope, Functional Scope and Scope Chain in javascript.
+
+Ans:-   Local Scope: Refers to variables that are defined within a function. These variables are not accessible outside of that function.
+
+        Block Scope: Introduced with let and const, block scope refers to variables that are defined within a block (e.g., within {} braces). 
+        These variables are not accessible outside of that block.
+
+        Functional Scope: This is similar to local scope, where variables defined within a function are only accessible within that function. 
+        Functions create their own scope.
+
+        Scope Chain: This is the mechanism by which JavaScript resolves variable names. When a variable is referenced, JavaScript looks for it 
+        in the current scope, and if it’s not found, it moves up the scope chain to the outer scopes until it finds the variable or reaches the global scope.
